@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+  
+    <style name="ListView">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>  
+
+    <!-- Roboto Thin font was added in API level 16 -->
+
+   <style name="MadsonicTheme.NoBackground" parent="@android:style/Theme">
+    <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+<!--<item name="android:buttonStyle">@style/RobotoButtonStyle</item>-->
+    </style>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+
+
+</resources>

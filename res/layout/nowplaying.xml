@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <include layout="@layout/action_bar"/>
+    <include layout="@layout/tab_progress"/>
+
+    <View
+    android:layout_width="fill_parent"
+    android:layout_height="1px"
+    android:background="@color/dividerColor" />
+    
+    <TextView
+            android:id="@+id/select_album_empty"
+            android:text="@string/select_album.empty"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"/>
+
+    <com.mobeta.android.dslv.DragSortListView
+        android:id="@+id/select_song_entries"
+        style="@style/DragDropListView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.72"
+        android:fastScrollEnabled="false"
+        android:textFilterEnabled="true" />
+			
+	<LinearLayout android:orientation="horizontal"
+		android:layout_marginTop="3dp"
+		android:layout_marginBottom="1dp"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">				
+				
+		<Button
+		    android:id="@+id/select_album_pin"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_marginLeft="3dp"
+		    android:layout_marginRight="3dp"
+		    android:layout_weight="1"
+		    android:text="@string/common.pin"
+		    android:textAppearance="?android:attr/textAppearanceSmall"
+		    android:visibility="gone" />
+
+		<Button android:id="@+id/select_album_unpin"
+				android:text="@string/common.unpin"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_marginLeft="3dp"
+				android:layout_marginRight="3dp"
+				android:layout_weight="1"
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:visibility="gone"/>
+					  
+	</LinearLayout>
+	
+	<LinearLayout android:orientation="horizontal"
+		android:layout_marginTop="3dp"
+		android:layout_marginBottom="3dp"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/select_album_select"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:text="@string/select_album.select"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/select_album_play_now"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:text="@string/common.play_now"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone" />
+				
+		<Button
+		    android:id="@+id/select_album_play_shuffled"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_marginLeft="3dp"
+		    android:layout_marginRight="3dp"
+		    android:layout_weight="1"
+		    android:text="@string/common.play_shuffled"
+		    android:textAppearance="?android:attr/textAppearanceSmall"
+		    android:visibility="gone" />
+
+        <Button
+            android:id="@+id/select_album_play_last"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:text="@string/common.play_last"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/select_album_delete"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:text="@string/common.delete"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <include layout="@layout/button_bar"/>
+
+</LinearLayout>
+

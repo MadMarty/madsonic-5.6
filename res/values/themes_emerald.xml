@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+<!-- MADSONIC EMERALD -->
+  <style name="Madsonic.Emerald" parent="android:Theme.Holo">
+    <item name="android:actionBarStyle">@style/ActionBar.Dark</item>
+    <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Dark</item>
+    <item name="android:actionBarWidgetTheme">@style/Theme.stylingactionbar.widget</item> 
+    <item name="android:actionDropDownStyle">@style/DropDownNav.Dark</item>
+    <item name="android:activatedBackgroundIndicator">@drawable/activated_background_dark</item>
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMadsonic.Dark</item>
+    <item name="android:buttonStyle">@style/ButtonMadsonic.Black</item>  
+    <item name="android:buttonStyleToggle">@style/ToggleMadsonic.Black</item>
+    <item name="android:checkboxStyle">@style/CheckBoxMadsonic.Black</item>
+    <item name="android:dropDownListViewStyle">@style/DropDownListView.Black</item>  
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerMadsonic.Black</item> 
+    <item name="android:editTextStyle">@style/EditTextMadsonic.Black</item>
+    <item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb_black</item>
+    <item name="android:imageButtonStyle">@style/Widget.Black.ImageButton</item>
+    <item name="android:listChoiceBackgroundIndicator">@drawable/list_selector_black</item>
+    <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_black</item>
+    <item name="android:listChoiceIndicatorSingle">@drawable/btn_radio_holo_dark</item>
+    <item name="android:listPopupWindowStyle">@style/PopupMenu.Emerald</item>
+    <item name="android:listSeparatorTextViewStyle">@style/listSeparatorTextViewStyle.Light</item>
+    <item name="android:popupMenuStyle">@style/PopupMenu.Emerald</item>
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarMadsonic.Black</item>
+    <item name="android:seekBarStyle">@style/SeekBarMadsonic.Black</item>
+    <item name="android:textColorPrimary">@color/emerald</item>    
+    <item name="android:textColorSecondary">@color/black</item>	
+    <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+    <item name="android:windowBackground">@drawable/background_emerald</item>	
+    <item name="chat">@drawable/ic_menu_chat_dark</item>
+    <item name="chat_send">@drawable/ic_menu_chat_send_dark</item>
+<!-- <item name="android:listViewStyle">@style/ListViewMadsonic.Dark</item>  -->    
+<!-- <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.Widget.PopupMenu.Large.Dark</item> -->  
+<!-- <item name="android:textAppearanceSmallPopupMenu">@style/TextAppearance.Widget.PopupMenu.Small.Dark</item> --> 
+  </style>
+
+  <!-- MADSONIC EMERALD FULL-->
+  <style name="Madsonic.Emerald.Fullscreen" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+    <item name="android:actionBarStyle">@style/ActionBar.Dark</item>
+    <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Dark</item>
+    <item name="android:actionBarWidgetTheme">@style/Theme.stylingactionbar.widget</item> 
+    <item name="android:actionDropDownStyle">@style/DropDownNav.Dark</item>
+    <item name="android:activatedBackgroundIndicator">@drawable/activated_background_dark</item>
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMadsonic.Dark</item>
+    <item name="android:buttonStyle">@style/ButtonMadsonic.Black</item>
+    <item name="android:buttonStyleToggle">@style/ToggleMadsonic.Black</item>
+    <item name="android:checkboxStyle">@style/CheckBoxMadsonic.Black</item>
+    <item name="android:dropDownListViewStyle">@style/DropDownListView.Black</item>  
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerMadsonic.Black</item> 
+    <item name="android:editTextStyle">@style/EditTextMadsonic.Black</item>
+    <item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb_black</item>
+    <item name="android:imageButtonStyle">@style/Widget.Black.ImageButton</item>
+    <item name="android:listChoiceBackgroundIndicator">@drawable/list_selector_black</item>
+    <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_black</item>
+    <item name="android:listChoiceIndicatorSingle">@drawable/btn_radio_holo_dark</item>
+    <item name="android:listPopupWindowStyle">@style/PopupMenu.Emerald</item>
+    <item name="android:listSeparatorTextViewStyle">@style/listSeparatorTextViewStyle.Light</item>
+    <item name="android:popupMenuStyle">@style/PopupMenu.Emerald</item>
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarMadsonic.Black</item>
+    <item name="android:seekBarStyle">@style/SeekBarMadsonic.Black</item>
+    <item name="android:textColorPrimary">@color/emerald</item>    
+    <item name="android:textColorSecondary">@color/black</item>	
+    <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+    <item name="android:windowBackground">@drawable/background_emerald</item>	
+    <item name="chat">@drawable/ic_menu_chat_dark</item>
+    <item name="chat_send">@drawable/ic_menu_chat_send_dark</item>
+<!-- <item name="android:listViewStyle">@style/ListViewMadsonic.Dark</item>  -->    
+<!-- <item name="android:textAppearanceLargePopupMenu">@style/TextAppearance.Widget.PopupMenu.Large.Dark</item> -->  
+<!-- <item name="android:textAppearanceSmallPopupMenu">@style/TextAppearance.Widget.PopupMenu.Small.Dark</item> --> 
+    </style>
+
+</resources>

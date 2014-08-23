@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:background="@color/transparent"
+    android:orientation="horizontal" >
+   
+    <CheckedTextView
+        android:id="@+id/song_check"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:paddingLeft="2dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"        
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.48"
+            android:drawablePadding="6dip"
+            android:paddingBottom="3dp"
+            android:paddingLeft="6dip"
+            android:paddingRight="6dip"
+            android:paddingTop="3dp"
+            android:text="i like your music"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="16sp" 
+			android:singleLine="true"
+			android:lines="1"
+			android:maxLines="1"
+			android:ellipsize="marquee"
+			android:marqueeRepeatLimit="marquee_forever"
+			android:scrollHorizontally="true"
+			> 
+			
+			<requestFocus android:focusable="true"
+			android:focusableInTouchMode="true"
+			android:duplicateParentState="true" />
+			
+			</TextView>
+
+        <TextView
+            android:id="@+id/song_artist"
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="0.02"
+            android:ellipsize="middle"
+            android:paddingLeft="6dip"
+            android:singleLine="true"
+            android:text="Billy Newton"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+			          
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/song_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:text="2:45"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/song_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="13dp"
+            android:drawablePadding="1dip"
+            android:text="100%"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/song_rank"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/ranktemp"
+            android:focusable="false"
+            android:gravity="right|center_vertical"
+            android:paddingRight="6dp"
+            android:text="99"
+            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:visibility="gone" />
+        
+        <ImageView
+            android:id="@+id/song_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="24dp"
+            android:maxWidth="24dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/download_none_dark"
+            android:visibility="gone" />
+        
+        <ImageButton
+            android:id="@+id/song_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:background="@null"
+            android:focusable="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="1dp"
+            android:src="@android:drawable/btn_star_big_off" />
+                
+    </LinearLayout>
+    
+			<ImageView
+			    android:id="@id/drag_handle"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_vertical"
+			    android:adjustViewBounds="false"
+			    android:paddingRight="4dp"
+			    android:src="@drawable/dragid_000"
+			    android:visibility="visible" />
+    
+</LinearLayout>

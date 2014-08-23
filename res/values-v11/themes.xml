@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+  
+<!-- Work-around for bug in Android 2 -->
+    <style name="ListView">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>  
+
+    <!-- Roboto Thin font was added in API level 16 -->
+
+   <style name="MadsonicTheme.NoBackground" parent="@android:style/Theme">
+   </style>
+
+</resources>
