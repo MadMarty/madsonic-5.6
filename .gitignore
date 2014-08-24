@@ -1,3 +1,6 @@
+# svn
+.svn/*
+
 # built application files
 *.apk
 *.ap_
