@@ -141,8 +141,8 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
         }
         
      // See FileUtil.getMadsonicDirectory() for details.
-        cacheLocation.setEnabled(Build.VERSION.SDK_INT < 19);
-        
+     // cacheLocation.setEnabled(Build.VERSION.SDK_INT < 19);
+        cacheLocation.setEnabled(true);       
 
 //        findPreference(Constants.PREFERENCES_KEY_CLEAR_SEARCH_HISTORY).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 //            @Override

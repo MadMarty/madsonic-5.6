@@ -37,6 +37,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.zip.GZIPInputStream;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -750,6 +751,10 @@ public class RESTMusicService implements MusicService {
                 List<Object> parameterValues = Arrays.<Object>asList(entry.getCoverArt(), saveSize);
                 HttpEntity entity = getEntityForURL(context, url, null, parameterNames, parameterValues, progressListener);
                 in = entity.getContent();
+				Header contentEncoding = entity.getContentEncoding();
+				if (contentEncoding != null && contentEncoding.getValue().equalsIgnoreCase("gzip")) {
+					in = new GZIPInputStream(in);
+				}
 
                 // If content type is XML, an error occured.  Get it.
                 String contentType = Util.getContentType(entity);
@@ -892,6 +897,10 @@ public class RESTMusicService implements MusicService {
         String contentType = Util.getContentType(response.getEntity());
         if (contentType != null && contentType.startsWith("text/xml")) {
             InputStream in = response.getEntity().getContent();
+			Header contentEncoding = response.getEntity().getContentEncoding();
+			if (contentEncoding != null && contentEncoding.getValue().equalsIgnoreCase("gzip")) {
+				in = new GZIPInputStream(in);
+			}
             try {
                 new ErrorParser(context).parse(new InputStreamReader(in, Constants.UTF_8));
             } finally {
@@ -1157,12 +1166,21 @@ public class RESTMusicService implements MusicService {
         }
 
         InputStream in = entity.getContent();
+		Header contentEncoding = entity.getContentEncoding();
+		if (contentEncoding != null && contentEncoding.getValue().equalsIgnoreCase("gzip")) {
+			in = new GZIPInputStream(in);
+		}
         return new InputStreamReader(in, Constants.UTF_8);
     }
 
-    private HttpEntity getEntityForURL(Context context, String url, HttpParams requestParams, List<String> parameterNames,
-                                       List<Object> parameterValues, ProgressListener progressListener) throws Exception {
-        return getResponseForURL(context, url, requestParams, parameterNames, parameterValues, null, progressListener, null).getEntity();
+	private HttpEntity getEntityForURL(Context context, String url, HttpParams requestParams, List<String> parameterNames,
+		List<Object> parameterValues, ProgressListener progressListener) throws Exception {
+		
+		return getEntityForURL(context, url, requestParams, parameterNames, parameterValues, progressListener, null);
+	}
+	
+    private HttpEntity getEntityForURL(Context context, String url, HttpParams requestParams, List<String> parameterNames, List<Object> parameterValues, ProgressListener progressListener, CancellableTask task) throws Exception {
+        return getResponseForURL(context, url, requestParams, parameterNames, parameterValues, null, progressListener, task).getEntity();
     }
 
     private HttpResponse getResponseForURL(Context context, String url, HttpParams requestParams,
@@ -1243,6 +1261,9 @@ public class RESTMusicService implements MusicService {
                     request.addHeader(header);
                 }
             }
+			if(url.indexOf("getCoverArt") == -1 && url.indexOf("stream") == -1 && url.indexOf("getAvatar") == -1) {
+				request.addHeader("Accept-Encoding", "gzip");
+			}
 
             // Set credentials to get through apache proxies that require authentication.
             

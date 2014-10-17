@@ -324,8 +324,12 @@ public class SongView extends UpdateView implements Checkable {
 				this.pinnedImage = R.drawable.download_streaming;
 			}
 		}	
-
-		Integer calc = (int) (partialFile.length() * 100 / song.getSize());
+		
+		Integer calc = 0;
+		if (song != null && song.getSize() != null) {
+			calc = (int) (partialFile.length() * 100 / song.getSize());
+		}
+		
 		Integer statusImage = R.drawable.dragid_000;  
 
 		dragHandle = (ImageView) findViewById(R.id.drag_handle);

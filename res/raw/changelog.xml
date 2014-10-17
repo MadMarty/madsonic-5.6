@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    
-	<release version="5.6" versioncode="303" releasedate="24/08/2014">
+
+	<release version="5.6" versioncode="308" releasedate="02/10/2014">
+     	<change>Fix: Fix MX-Player streaming</change>
+     	<change>Fix: Exception on Song-View </change>
+     	<change>Fix: unlock cache foldersettings </change>
      	<change>New: SNI Support for virtualhosts</change>
 	</release>
 	

@@ -70,8 +70,10 @@ public enum VideoPlayerType {
             	int maxBitrate = Util.getMaxVideoBitrate(activity);
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setPackage(installedAd ? PACKAGE_NAME_MX_AD : PACKAGE_NAME_MX_PRO);
+                intent.setDataAndType(Uri.parse(MusicServiceFactory.getMusicService(activity).getVideoUrl("raw", maxBitrate, activity, entry.getId(), false)), "video/*"); // entry.getTranscodedSuffix()
                 intent.putExtra("title", entry.getTitle());
-                intent.setDataAndType(Uri.parse(MusicServiceFactory.getMusicService(activity).getVideoUrl(entry.getTranscodedSuffix(),maxBitrate, activity, entry.getId(), false)), "video/*");
+                intent.putExtra("decode_mode", (byte)2);
+                intent.putExtra("fast_mode", true);
                 activity.startActivity(intent);
             }
         }
@@ -185,6 +187,7 @@ public enum VideoPlayerType {
         public void playVideo(Activity activity, MusicDirectory.Entry entry) throws Exception {
         	int maxBitrate = Util.getMaxVideoBitrate(activity);
         	Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.putExtra("title", entry.getTitle());
             intent.setDataAndType(Uri.parse(MusicServiceFactory.getMusicService(activity).getVideoUrl("raw", maxBitrate, activity, entry.getId(), false)), "video/*");
             activity.startActivity(intent);
         }
@@ -196,7 +199,8 @@ public enum VideoPlayerType {
         public void playVideo(Activity activity, MusicDirectory.Entry entry) throws Exception {
         	int maxBitrate = Util.getMaxVideoBitrate(activity);
         	Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setDataAndType(Uri.parse(MusicServiceFactory.getMusicService(activity).getHlsUrl(entry.getId(), maxBitrate, activity)), "video/*");
+            intent.putExtra("title", entry.getTitle());
+            intent.setDataAndType(Uri.parse(MusicServiceFactory.getMusicService(activity).getHlsUrl(entry.getId(), maxBitrate, activity)), "application/x-mpegURL");
             activity.startActivity(intent);
         }        
     };
