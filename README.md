@@ -1,4 +1,4 @@
-Madsonic-Client-5.5
+Madsonic-Client-5.6
 ===================
 
-Madsonic Android Client 5.6.302
+Madsonic Android Client 5.6.308
